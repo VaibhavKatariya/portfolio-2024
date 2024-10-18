@@ -1,0 +1,19 @@
+{
+  "socials": [
+    {
+      "name": "GitHub",
+      "href": "https://github.com/VaibhavKatariya",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://linkedin.com/in/vaibhavkatariyaa",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:vaibhav@kaily.in",
+      "icon": "mail"
+    }
+  ]
+}

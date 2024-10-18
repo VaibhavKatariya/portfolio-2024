@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vaibhav Katariya's Portfolio
 
-## Getting Started
+<!-- Welcome to my portfolio! After weeks of hard work, I’m excited to share a clean, functional site that showcases my projects and skills while providing a user-friendly experience.
+-->
 
-First, run the development server:
+Welcome to my portfolio! This site is currently under development, and I’m excited to share a clean and functional design that will showcase my projects and skills while providing a user-friendly experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Minimalistic UI**: Built with [Shadcn UI](https://ui.shadcn.com/) for a clean design that focuses on content.
+- **Responsive Design**: Mobile-friendly layout with a toggle for **dark and light modes**.
+- **Direct Access**: My resume, projects, and contact links are easily accessible from the homepage.
+- **Contact Page**: Send me a message directly via the Contact page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is open-source and licensed under the MIT License.
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+Feel free to reach out to me via:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Email**: [Vaibhav@kaily.in](mailto:vaibhav@kaily.in)
+- **GitHub**: [GitHub Profile](https://github.com/VaibhavKatariya)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/vaibhavkatariyaa)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thank you for visiting my portfolio! I'm always looking for new opportunities to learn and grow, so feel free to connect.
