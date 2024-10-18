@@ -1,0 +1,22 @@
+{
+  "career": [
+    {
+      "name": "Google Developer Student Clubs JIIT 128",
+      "href": "https://gdsc-jiit128.tech/",
+      "title": "Core Tech Team Member",
+      "logo": "/career/dsc_jiit_logo.jpeg",
+      "start": "Sept 2024",
+      "description": [
+        "Contributed to the development of the official website of the club.",
+        "Sucessfully conducted Google Cloud Study Jams and other events."
+      ],
+      "links": [
+        {
+          "name": "GDG 128 Site",
+          "href": "https://github.com/VaibhavKatariya/GDSC-128-Site",
+          "icon": "github"
+        }
+      ]
+    }
+  ]
+}

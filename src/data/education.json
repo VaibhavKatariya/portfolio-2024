@@ -1,0 +1,20 @@
+{
+  "education": [
+    {
+      "name": "Jaypee Institute Of Information Technology",
+      "href": "https://jiit.ac.in",
+      "title": "Bachelor of Technology - BTech, Electrical, Electronics and Communications Engineering",
+      "logo": "/education/jiit.jpeg",
+      "start": "Aug 2023",
+      "end": "Jul 2027"
+    },
+    {
+      "name": "Air Force Bal Bharati School (AFBBS)",
+      "href": "https://www.airforcebalbharatischool.in/",
+      "title": "Senior Secondary Education , Science Stream: Physics, Chemistry, Mathematics",
+      "logo": "/education/afbbs.jpeg",
+      "start": "Jun 2010",
+      "end": "Mar 2023"
+    }
+  ]
+}
