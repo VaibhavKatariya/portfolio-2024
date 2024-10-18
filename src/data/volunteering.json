@@ -1,43 +1,45 @@
 {
-    "volunteering": [
-      {
-        "name": "Hactoberfest",
-        "href": "https://hacktoberfest.com/",
-        "title": "Contributor",
-        "logo": "/volunteering/hacktoberfest_logo.jpeg",
-        "start": "Oct 2024",
-        "end": "Oct 2024",
-        "description": [
-          "Contributed pull requests to multiple projects, improved features, fixed bugs, and supported a global developer community through open-source."
-        ],
-        "links": [
-          {
-            "name": "email of completion",
-            "href": "https://media.licdn.com/dms/image/v2/D562DAQFOckG9mzhHOg/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1728922830065?e=1729886400&v=beta&t=qQUy6imnYZxPfnQDeWLotgTQu7TCsz2biaohWpf065E",
-            "icon": "mail"
-          },
-          {
-            "name": "Badges",
-            "href": "https://holopin.me/vaibhavkatariya",
-            "icon": "award"
-          }
-        ]
-      },
-      {
-        "name": "GirlScript Summer of Code",
-        "href": "https://gssoc.girlscript.tech/",
-        "title": "Contributor",
-        "logo": "/volunteering/girlscriptsoc_logo.jpeg",
-        "start": "Oct 2024",
-        "end": "Oct 2024",
-        "links": [
-          {
-            "name": "Badge",
-            "href": "https://media.licdn.com/dms/image/v2/D562DAQHKRa66LGtKWg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1728922985475?e=1729886400&v=beta&t=2wRXh-_Ec5y9SooRkN8zPC5sHR1TuKT72TLJwI7d27A",
-            "icon": "award"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "volunteering": [
+    {
+      "name": "Hacktoberfest'24 Contributor",
+      "href": "https://hacktoberfest.com/",
+      "title": "Hactoberfest",
+      "logo": "/volunteering/hacktoberfest_logo.jpeg",
+      "start": "Oct 2024",
+      "end": "Oct 2024",
+      "description": [
+        "Contributed pull requests to multiple projects, improved features, fixed bugs, and supported a global developer community through open-source."
+      ],
+      "links": [
+        {
+          "name": "email of completion",
+          "href": "https://media.licdn.com/dms/image/v2/D562DAQFOckG9mzhHOg/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1728922830065?e=1729886400&v=beta&t=qQUy6imnYZxPfnQDeWLotgTQu7TCsz2biaohWpf065E",
+          "icon": "mail"
+        },
+        {
+          "name": "Badges",
+          "href": "https://holopin.me/vaibhavkatariya",
+          "icon": "award"
+        }
+      ]
+    },
+    {
+      "name": "GSSoC'24 Contributor",
+      "href": "https://gssoc.girlscript.tech/",
+      "title": "GirlScript Summer of Code",
+      "logo": "/volunteering/girlscriptsoc_logo.jpeg",
+      "start": "Oct 2024",
+      "end": "Oct 2024",
+      "description": [
+        "Actively contributed to open-source repositories during GSSoC, collaborating with project maintainers and other contributors. Focused on feature development to help improve the overall quality and usability of various projects."
+      ],
+      "links": [
+        {
+          "name": "Badge",
+          "href": "https://media.licdn.com/dms/image/v2/D562DAQHKRa66LGtKWg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1728922985475?e=1729886400&v=beta&t=2wRXh-_Ec5y9SooRkN8zPC5sHR1TuKT72TLJwI7d27A",
+          "icon": "award"
+        }
+      ]
+    }
+  ]
+}
