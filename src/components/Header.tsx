@@ -11,10 +11,6 @@ const navLinks = [
     href: "/projects",
   },
   {
-    name: "Blog",
-    href: "/blog",
-  },
-  {
     name: "Contact",
     href: "/contact",
   },
@@ -27,11 +23,8 @@ export default function Header() {
         <ul className="flex gap-4 sm:gap-8">
           {navLinks.map((nav, id) => (
             <li key={id} className="link">
-            <Link legacyBehavior href={nav.href} passHref>
-              <a>{nav.name}</a>
-            </Link>
-          </li>
-          
+              <Link href={nav.href}>{nav.name}</Link>
+            </li>
           ))}
         </ul>
         <div className="flex gap-0 sm:gap-4">
