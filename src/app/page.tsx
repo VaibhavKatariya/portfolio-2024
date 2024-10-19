@@ -7,6 +7,7 @@ import Link from "next/link";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import SectionCards from "@/components/SectionCards";
+import SkillsSection from "@/components/SkillSection";
 
 const Vaibhav_Birth_Year = 2005;
 const LIMIT = 2;
@@ -68,6 +69,8 @@ export default function Home() {
           </div>
           <SectionCards type="projects" limit={LIMIT} />
         </section>
+        
+        <SkillsSection />
 
         <section className="flex flex-col gap-8">
           <div className="flex justify-between">
