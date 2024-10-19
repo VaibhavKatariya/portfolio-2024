@@ -8,6 +8,17 @@ const iconLink = z.object({
 });
 export type IconLink = z.infer<typeof iconLink>;
 
+const project = z.object({
+  name: z.string(),
+  description: z.string(),
+  href: z.string().url().optional(),
+  image: z.string().optional(),
+  tags: z.array(z.string()),
+  links: z.array(iconLink),
+});
+export const projectSchema = z.object({ projects: z.array(project) });
+export type Project = z.infer<typeof project>;
+
 const experience = z.object({
   name: z.string(),
   href: z.string(),

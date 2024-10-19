@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "name": "SupplySync - An Inventory Management System",
+      "description": "A full-stack Inventory Management System web application built using Next.js, Firebase, and Tailwind CSS.",
+      "image": "/projects/supplySync.png",
+      "href": "https://github.com/VaibhavKatariya/SupplySync",
+      "tags": [
+        "Next.js",
+        "JavaScript",
+        "TailwindCSS",
+        "Firebase",
+        "Full-Stack"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/VaibhavKatariya/SupplySync",
+          "icon": "github"
+        },
+        {
+          "name": "Demo",
+          "href": "https://supplysync.netlify.app/",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
+      "name": "Shiksha Setu - internal",
+      "description": "This project is a user-friendly learning dashboard designed for both students and teachers. It helps instructors manage educational resources and allows real-time tracking of student progress.",
+      "href": "https://github.com/VaibhavKatariya/ShikshaSetu-internal",
+      "image": "/projects/shiksha-setu.png",
+      "tags": [
+        "Next.js",
+        "JavaScript",
+        "TailwindCSS",
+        "Firebase",
+        "Full-Stack",
+        "ShadCn"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/VaibhavKatariya/ShikshaSetu-internal",
+          "icon": "github"
+        },
+        {
+          "name": "Demo",
+          "href": "https://shiksha-setu.vercel.app/",
+          "icon": "external-link"
+        }
+      ]
+    }
+  ]
+}

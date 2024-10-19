@@ -1,12 +1,15 @@
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, FileDown } from "lucide-react";
+import { ArrowRightIcon, ArrowUpRight, FileDown } from "lucide-react";
 import VaibhavImage from "@/../public/Vaibhav.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import Experience from "@/components/Experience";
+import LinkWithIcon from "@/components/LinkWithIcon";
+import Projects from "@/components/Projects";
 
 const Vaibhav_Birth_Year = 2005;
+const LIMIT = 2;
 
 export default function Home() {
 
@@ -52,6 +55,19 @@ export default function Home() {
         </section>
 
         <Experience />
+
+        <section className="flex flex-col gap-8">
+          <div className="flex justify-between">
+            <h2 className="title text-2xl sm:text-3xl">Featured Projects</h2>
+            <LinkWithIcon
+              href="/projects"
+              position="right"
+              icon={<ArrowRightIcon className="size-5" />}
+              text="View More"
+            />
+          </div>
+          <Projects limit={LIMIT} />
+        </section>
 
       </article>
     </>
