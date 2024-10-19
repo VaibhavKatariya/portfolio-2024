@@ -17,7 +17,7 @@ interface Props {
 }
 
 export function CardLayout({ project }: Props) {
-    const { name, href, description, image, tags = [], links } = project;
+    const { name, href, description, image, tags, links } = project;
 
     return (
         <Card className="flex flex-col">

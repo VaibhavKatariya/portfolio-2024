@@ -8,7 +8,6 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 
 export default function ProjectPage() {
-  const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -17,11 +16,15 @@ export default function ProjectPage() {
     event.preventDefault();
 
     const form = formRef.current;
-    setIsSubmitting(true);
-    form.submit();
-    form.reset();
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+
+    // Check if the form is not null
+    if (form) {
+      setIsSubmitting(true);
+      form.submit();
+      form.reset();
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -59,7 +62,6 @@ export default function ProjectPage() {
                     autoComplete="given-name"
                     required
                   />
-                  {errors.name && <p className="input-error">{errors.name}</p>}
                 </div>
 
                 <div className="h-16">
@@ -71,7 +73,6 @@ export default function ProjectPage() {
                     autoComplete="email"
                     required
                   />
-                  {errors.email && <p className="input-error">{errors.email}</p>}
                 </div>
 
                 <div className="h-32 sm:col-span-2">
@@ -83,7 +84,6 @@ export default function ProjectPage() {
                     className="resize-none"
                     required
                   />
-                  {errors.message && <p className="input-error">{errors.message}</p>}
                 </div>
               </div>
 
