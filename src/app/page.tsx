@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
-import Projects from "@/components/Projects";
+import SectionCards from "@/components/SectionCards";
 
 const Vaibhav_Birth_Year = 2005;
 const LIMIT = 2;
@@ -66,7 +66,20 @@ export default function Home() {
               text="View More"
             />
           </div>
-          <Projects limit={LIMIT} />
+          <SectionCards type="projects" limit={LIMIT} />
+        </section>
+
+        <section className="flex flex-col gap-8">
+          <div className="flex justify-between">
+            <h2 className="title text-2xl sm:text-3xl">License & Certifications</h2>
+            <LinkWithIcon
+              href="/certificates"
+              position="right"
+              icon={<ArrowRightIcon className="size-5" />}
+              text="View More"
+            />
+          </div>
+          <SectionCards type="certificates" limit={LIMIT} />
         </section>
 
       </article>

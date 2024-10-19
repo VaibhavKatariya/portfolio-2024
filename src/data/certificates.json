@@ -1,0 +1,56 @@
+{
+    "certificates": [
+      {
+        "name": "Get Started with API Gateway Skill Badge",
+        "description": "Complete the introductory Use Functions, Formulas, and Charts in Google Sheets skill badge to demonstrate skills in the following: using API Gateway to deploy, secure, and manage APIs with a fully managed gateway.",
+        "image": "/certificates/badge_1.png",
+        "href": "https://www.credly.com/badges/af92e74e-abc9-478a-a176-1c9dbcad22f7/public_url",
+        "links": [
+          {
+            "name": "Show Credential",
+            "href": "https://www.credly.com/badges/af92e74e-abc9-478a-a176-1c9dbcad22f7/public_url",
+            "icon": "external-link"
+          }
+        ]
+      },
+      {
+        "name": "Get Started with Cloud Storage Skill Badge",
+        "description": "Complete the Get Started with Cloud Storage skill badge to demonstrate skills in the following: how to create a Cloud Storage bucket, how to use the Cloud Storage command line, and how to use Bucket Lock to protect objects in a bucket.",
+        "href": "https://www.credly.com/badges/b852750e-a90c-4e01-ba2f-094e4a198dad/public_url",
+        "image": "/certificates/badge_2.png",
+        "links": [
+          {
+            "name": "Show Credential",
+            "href": "https://www.credly.com/badges/af92e74e-abc9-478a-a176-1c9dbcad22f7/public_url",
+            "icon": "external-link"
+          }
+        ]
+      },
+      {
+        "name": "The Basics of Google Cloud Compute Skill Badge",
+        "description": "Complete the The Basics of Google Cloud Compute skill badge to demonstrate skills in the following: how to work with virtual machines (VMs), persistent disks, and web servers using Compute Engine.",
+        "href": "https://www.credly.com/badges/a891926a-318a-4196-92ea-ad2730bf9b76/public_url",
+        "image": "/certificates/badge_3.png",
+        "links": [
+          {
+            "name": "Show Credential",
+            "href": "https://www.credly.com/badges/a891926a-318a-4196-92ea-ad2730bf9b76/public_url",
+            "icon": "external-link"
+          }
+        ]
+      },
+      {
+        "name": "Get Started with Dataplex Skill Badge",
+        "description": "Complete the Get Started with Dataplex skill badge to demonstrate skills in the following: use Dataplex to start creating a data mesh on Google Cloud.",
+        "href": "https://www.credly.com/badges/a271a47d-518b-4d86-97ca-f052431432ed/public_url",
+        "image": "/certificates/badge_4.png",
+        "links": [
+          {
+            "name": "Show Credential",
+            "href": "https://www.credly.com/badges/a271a47d-518b-4d86-97ca-f052431432ed/public_url",
+            "icon": "external-link"
+          }
+        ]
+      }
+    ]
+  }

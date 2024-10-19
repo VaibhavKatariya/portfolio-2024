@@ -16,8 +16,8 @@ interface Props {
     project: Project;
 }
 
-export function ProjectCard({ project }: Props) {
-    const { name, href, description, image, tags, links } = project;
+export function CardLayout({ project }: Props) {
+    const { name, href, description, image, tags = [], links } = project;
 
     return (
         <Card className="flex flex-col">
@@ -29,7 +29,7 @@ export function ProjectCard({ project }: Props) {
                             alt={name}
                             width={500}
                             height={300}
-                            className="h-40 w-full object-cover object-top"
+                            className="h-40 rounded-md w-full object-cover object-top"
                         />
                     </Link>
                 )}

@@ -19,6 +19,15 @@ const project = z.object({
 export const projectSchema = z.object({ projects: z.array(project) });
 export type Project = z.infer<typeof project>;
 
+const certificate = z.object({
+  name: z.string(),
+  description: z.string(),
+  href: z.string().url().optional(),
+  image: z.string().optional(),
+  links: z.array(iconLink),
+});
+export const certificateSchema = z.object({ certificates: z.array(certificate) });
+
 const experience = z.object({
   name: z.string(),
   href: z.string(),
