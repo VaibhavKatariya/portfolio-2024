@@ -13,7 +13,11 @@ export default function Footer() {
           </Link>
           {" | "}
           <Link className="link font-bold" href="/privacy">
-            privacy
+            Privacy
+          </Link>
+          {" | "}
+          <Link target="_blank" className="link font-bold" href="https://blog.kaily.in">
+            Blog
           </Link>
         </p>
       </section>
