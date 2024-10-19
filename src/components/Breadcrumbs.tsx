@@ -15,14 +15,16 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
         <Breadcrumb>
             <BreadcrumbList>
                 {items.map((item, index) => (
-                    <BreadcrumbItem key={index}>
-                        {item.href ? (
-                            <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
-                        ) : (
-                            <span>{item.label}</span>
-                        )}
+                    <>
+                        <BreadcrumbItem key={index}>
+                            {item.href ? (
+                                <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
+                            ) : (
+                                <span>{item.label}</span>
+                            )}
+                        </BreadcrumbItem>
                         {index < items.length - 1 && <BreadcrumbSeparator />}
-                    </BreadcrumbItem>
+                    </>
                 ))}
             </BreadcrumbList>
         </Breadcrumb>
