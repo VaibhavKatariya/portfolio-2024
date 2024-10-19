@@ -1,6 +1,27 @@
 {
   "projects": [
     {
+      "name": "Portfolio Website 2024",
+      "description": "I’m excited to share a clean, functional site that showcases my projects and skills while providing a user-friendly experience.",
+      "image": "/projects/portfolio-2024.png",
+      "href": "https://github.com/VaibhavKatariya/portfolio-2024",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "TailwindCSS",
+        "ShadCn",
+        "Full-Stack"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/VaibhavKatariya/portfolio-2024",
+          "icon": "github"
+        }
+      ]
+    },
+    {
       "name": "SupplySync - An Inventory Management System",
       "description": "A full-stack Inventory Management System web application built using Next.js, Firebase, and Tailwind CSS.",
       "image": "/projects/supplySync.png",

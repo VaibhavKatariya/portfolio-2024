@@ -34,7 +34,7 @@ export function CardLayout({ project }: Props) {
                     </Link>
                 )}
             </CardHeader>
-            <CardContent className="flex flex-col gap-2 cursor-default">
+            <CardContent className="flex flex-col gap-2">
                 <CardTitle>{name}</CardTitle>
                 <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
                     {description}
