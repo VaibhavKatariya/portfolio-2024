@@ -11,9 +11,13 @@ const navLinks = [
     href: "/projects",
   },
   {
+    name: "Certificates",
+    href: "/certificates",
+  },
+  {
     name: "Contact",
     href: "/contact",
-  },
+  }
 ];
 
 export default function Header() {
