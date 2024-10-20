@@ -15,7 +15,21 @@ const calistoga = Calistoga({
 
 export const metadata: Metadata = {
   title: "Vaibhav Katariya",
-  description: "My personal portfolio site showcasing my developer work.",
+  description: "Explore the personal portfolio of Vaibhav Katariya, a passionate web developer proficient in modern technologies like JavaScript, Next.js, and Firebase. Discover innovative projects, insights into my development journey, and contributions to open-source communities.",
+  openGraph: {
+    title: "Vaibhav Katariya - Portfolio",
+    description: "Dive into Vaibhav Katariya's personal developer portfolio, showcasing expertise in full-stack development, open-source contributions, and cutting-edge web technologies.",
+    url: "https://kaily.in",
+    type: "website",
+    images: [
+      {
+        url: "https://opengraph.githubassets.com/1a2b3c4d/vaibhavkatariya/portfolio-2024",
+        width: 1200,
+        height: 630,
+        alt: "Vaibhav Katariya Portfolio",
+      },
+    ],
+  }
 };
 
 export default function RootLayout({
