@@ -1,9 +1,6 @@
 # Vaibhav Katariya's Portfolio
 
-<!-- Welcome to my portfolio! After weeks of hard work, I’m excited to share a clean, functional site that showcases my projects and skills while providing a user-friendly experience.
--->
-
-Welcome to my portfolio! This site is currently under development, and I’m excited to share a clean and functional design that will showcase my projects and skills while providing a user-friendly experience.
+Welcome to my portfolio! I’m excited to share a clean, functional site that showcases my projects and skills while providing a user-friendly experience.
 
 ## Key Features
 
