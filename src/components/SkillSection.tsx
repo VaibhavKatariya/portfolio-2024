@@ -6,11 +6,11 @@ const skills = [
     { category: "Frontend", items: ["React", "Next.js", "HTML", "CSS", "Tailwind CSS"] },
     { category: "Backend", items: ["Node.js", "Express.js", "Firebase", "SupaBase"] },
     { category: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "FireStore", "Firebase Realtime Database"] },
+    { category: "Authentication & Security", items: ["JWT", "OAuth", "Firebase Auth", "Auth0", "NextAuth", "AWS Cognito"] },
     { category: "Tools", items: ["Docker", "Vercel", "npm", "GitHub", "Netlify", "Yarn", "Figma", "Notion", "Git"] },
-    { category: "Cloud Platforms", items: ["AWS", "Vercel", "Heroku", "Netlify", "Firebase"] },
+    { category: "Cloud Platforms", items: ["AWS", "Vercel", "Heroku", "Netlify", "Firebase", "GCP (Google Cloud Platform)"] },
     { category: "Version Control", items: ["Git", "GitHub", "GitLab"] },
-    { category: "Other", items: ["ESLint", "Prettier", "REST APIs", "Postman", "GitHub Actions"] },
-    { category: "Hardware & IoT (Minimal)", items: ["Arduino", "Rasberry Pi", "Sensors & Actuators"] }
+    { category: "Other", items: ["ESLint", "Prettier", "REST APIs", "Postman", "GitHub Actions", "Zod"] }
   ];
   
 
