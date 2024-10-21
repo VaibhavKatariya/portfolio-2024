@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const skills = [
     { category: "Languages", items: ["JavaScript", "TypeScript", "C", "C++"] },
-    { category: "Frontend", items: ["React", "Next.js", "HTML", "CSS", "Tailwind CSS"] },
+    { category: "Frontend", items: ["React", "Next.js", "HTML", "CSS", "Tailwind CSS", "Shad CN", "Chakra UI"] },
     { category: "Backend", items: ["Node.js", "Express.js", "Firebase", "SupaBase"] },
     { category: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "FireStore", "Firebase Realtime Database"] },
     { category: "Authentication & Security", items: ["JWT", "OAuth", "Firebase Auth", "Auth0", "NextAuth", "AWS Cognito"] },
