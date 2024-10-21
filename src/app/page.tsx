@@ -30,7 +30,7 @@ export default function Home() {
             <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
             <p className="mt-4 font-light">
               {new Date().getFullYear() - Vaibhav_Birth_Year}
-              -year-old software developer from India 🇮🇳
+              -year-old Full-Stack developer from India 🇮🇳
             </p>
             <p className="mt-2 font-light">
               Trust me, I&apos;m a software engineer ^_^
