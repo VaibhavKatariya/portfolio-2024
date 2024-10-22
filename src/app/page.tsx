@@ -1,8 +1,8 @@
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon, ArrowUpRight, FileDown } from "lucide-react";
-import VaibhavImage from "@/../public/Vaibhav.jpg";
-import Image from "next/image";
+// import VaibhavImage from "@/../public/Vaibhav.jpg";
+// import Image from "next/image";
 import Link from "next/link";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
@@ -17,15 +17,16 @@ export default function Home() {
   return (
     <>
       <article className="mt-8 flex flex-col gap-16 pb-16">
-        <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
-          <Image
+        <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-center">
+          {/* When inserting an image, change md:justify-center to md:justify-between */}
+          {/* <Image
             className="rounded-lg"
             src={VaibhavImage}
             alt="Photo of Vaibhav"
             width={175}
             height={175}
             priority
-          />
+          /> */}
           <div className="flex flex-col">
             <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
             <p className="mt-4 font-light">
