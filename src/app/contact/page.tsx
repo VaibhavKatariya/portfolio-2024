@@ -6,37 +6,71 @@ import { Textarea } from "@/components/ui/textarea";
 import { PaperPlaneIcon, ReloadIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { toast } from "sonner";
+import Head from "next/head";
+import { useRouter } from "next/navigation";
 
 export default function ProjectPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
+
+  const onCaptchaChange = (token: string | null) => {
+    if (token) {
+      setCaptchaVerified(true);
+      toast.success("Captcha verified!");
+    } else {
+      setCaptchaVerified(false);
+      toast.error("Captcha verification failed!");
+    }
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (!captchaVerified) {
+      toast.error("Please complete the captcha.");
+      return;
+    }
+
     const form = formRef.current;
 
-    // Check if the form is not null
     if (form) {
-      setIsSubmitting(true);
-      form.submit();
-      form.reset();
-      setIsSubmitted(true);
-      setIsSubmitting(false);
+      try {
+        setIsSubmitting(true);
+        form.submit();
+        form.reset();
+        setIsSubmitted(true);
+        toast.success("Message submitted successfully!");
+        setIsSubmitting(false);
+
+        setTimeout(() => {
+          router.push("/");
+        }, 5000);
+      } catch (error) {
+        toast.error("Error submitting the form. Please try again.");
+        console.error(error);
+        setIsSubmitting(false);
+      }
     }
   };
 
   return (
-    <article className="mt-8 flex flex-col gap-8 pb-16">
-      <h1 className="title">Contact Me</h1>
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Contact" },
-        ]}
-      />
-      <>
+    <>
+      <Head>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      </Head>
+      <article className="mt-8 flex flex-col gap-8 pb-16">
+        <h1 className="title">Contact Me</h1>
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Contact" },
+          ]}
+        />
         <iframe name="iframe_form" id="iframe_form" style={{ display: "none" }}></iframe>
 
         <form
@@ -63,7 +97,6 @@ export default function ProjectPage() {
                     required
                   />
                 </div>
-
                 <div className="h-16">
                   <Input
                     id="email"
@@ -74,12 +107,11 @@ export default function ProjectPage() {
                     required
                   />
                 </div>
-
                 <div className="h-32 sm:col-span-2">
                   <Textarea
                     rows={4}
                     name="entry.839337160"
-                    placeholder="Leave feedback about the site, career opportunities or just to say hello etc."
+                    placeholder="Leave feedback or say hello."
                     autoComplete="Message"
                     className="resize-none"
                     required
@@ -87,13 +119,16 @@ export default function ProjectPage() {
                 </div>
               </div>
 
-              <input name="partialResponse" type="hidden" value="[null,null,&quot;3545437302444625310&quot;]" />
-              <input name="fbzx" type="hidden" value="3545437302444625310" />
+              <div className="mt-4">
+                <ReCAPTCHA
+                  sitekey="6LdLvqwgAAAAAHBBAVg04LuznghSiq_z2YlAw-wd"
+                  onChange={onCaptchaChange}
+                />
+              </div>
 
-              <div className="mt-2">
+              <div className="mt-4">
                 <Button
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full disabled:opacity-50"
                 >
                   {isSubmitting ? (
@@ -109,7 +144,7 @@ export default function ProjectPage() {
                   )}
                 </Button>
                 <p className="mt-4 text-xs text-muted-foreground">
-                  By submitting this form, You agree to the{" "}
+                  By submitting this form, you agree to the{" "}
                   <Link href="/privacy" className="font-semibold">
                     privacy&nbsp;policy.
                   </Link>
@@ -118,7 +153,7 @@ export default function ProjectPage() {
             </>
           )}
         </form>
-      </>
-    </article>
+      </article>
+    </>
   );
 }
