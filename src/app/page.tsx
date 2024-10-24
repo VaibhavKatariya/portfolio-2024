@@ -1,6 +1,6 @@
 import Socials from "@/components/Socials";
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, ArrowUpRight, FileDown } from "lucide-react";
+import ResumeButton from "@/components/ResumeButton";
+import { ArrowRightIcon, ArrowUpRight } from "lucide-react";
 // import VaibhavImage from "@/../public/Vaibhav.jpg";
 // import Image from "next/image";
 import Link from "next/link";
@@ -46,10 +46,7 @@ export default function Home() {
             </div>
             <section className="mt-8 flex items-center gap-8">
               <Link href="/resume.pdf" target="_blank">
-                <Button variant="outline">
-                  <span className="font-semibold">Resume</span>
-                  <FileDown className="ml-2 size-5" />
-                </Button>
+                <ResumeButton />
               </Link>
               <Socials />
             </section>
@@ -70,7 +67,7 @@ export default function Home() {
           </div>
           <SectionCards type="projects" limit={LIMIT} />
         </section>
-        
+
         <SkillsSection />
 
         <section className="flex flex-col gap-8">
