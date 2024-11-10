@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const lastUpdated = "Oct 2024";
+const lastUpdated = "Nov 2024";
 
 export default function Page() {
   return (
@@ -17,12 +17,22 @@ export default function Page() {
         
         <h2 className="title">Information Collection</h2>
         <p>
-          As this is a static portfolio site, I do not actively collect personal information from visitors. There are no account creations, tracking cookies, or any form of data gathering.
+          As this is a static portfolio site, I do not actively collect personal information from visitors, except as described below. However, I use Google Analytics to track general user interactions, such as page views, clicks, and other engagement metrics. This helps me understand how visitors are interacting with the site and improve the user experience.
+        </p>
+
+        <h3>Google Analytics</h3>
+        <p>
+          To help improve my website and better understand how it is used, I utilize Google Analytics. This service collects anonymous data about your interactions with the site, such as pages visited and how you navigate through the content. This information is used solely for analytical purposes to optimize and improve the site.
         </p>
         
+        <h3>Cookies</h3>
+        <p>
+          Google Analytics uses cookies to track your interactions with the website. Cookies are small text files stored on your device. You can opt-out of cookies by adjusting your browser settings, though this may affect your experience on the website.
+        </p>
+
         <h3>Contact Information</h3>
         <p>
-          If you choose to contact me via email or through the contact form, the information you provide is at your discretion. I will only use this information to respond to your inquiries or engage in communication.
+          If you choose to contact me via <Link className="no-underline" href="mailto:vaibhav@kaily.in">email</Link> or through the <Link className="no-underline" href="/contact">contact form</Link>, the information you provide is at your discretion. I will only use this information to respond to your inquiries or engage in communication.
         </p>
         
         <h2 className="title">Usage of Collected Information</h2>
@@ -31,6 +41,7 @@ export default function Page() {
           <li>To ensure the website operates smoothly</li>
           <li>To enhance the website based on your feedback</li>
           <li>To respond to your questions or comments</li>
+          <li>To analyze website traffic and improve user experience using Google Analytics</li>
         </ul>
         
         <h2 className="title">Information Sharing</h2>
