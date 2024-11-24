@@ -1,56 +1,69 @@
 {
-    "certificates": [
-      {
-        "name": "Get Started with API Gateway Skill Badge",
-        "description": "Complete the introductory Use Functions, Formulas, and Charts in Google Sheets skill badge to demonstrate skills in the following: using API Gateway to deploy, secure, and manage APIs with a fully managed gateway.",
-        "image": "https://cdn.qwiklabs.com/ekXAQNUukXGsBzIAozJKF%2FxfN27PDqYf8KJ%2BsHQOtog%3D",
-        "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12043044",
-        "links": [
-          {
-            "name": "Show Credential",
-            "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12043044",
-            "icon": "external-link"
-          }
-        ]
-      },
-      {
-        "name": "Get Started with Cloud Storage Skill Badge",
-        "description": "Complete the Get Started with Cloud Storage skill badge to demonstrate skills in the following: how to create a Cloud Storage bucket, how to use the Cloud Storage command line, and how to use Bucket Lock to protect objects in a bucket.",
-        "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041964",
-        "image": "https://cdn.qwiklabs.com/C29WcLiPHUd2uj1zMaF2MepWKhC%2Bvs7WTUMUTA4nMFU%3D",
-        "links": [
-          {
-            "name": "Show Credential",
-            "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041964",
-            "icon": "external-link"
-          }
-        ]
-      },
-      {
-        "name": "The Basics of Google Cloud Compute Skill Badge",
-        "description": "Complete the The Basics of Google Cloud Compute skill badge to demonstrate skills in the following: how to work with virtual machines (VMs), persistent disks, and web servers using Compute Engine.",
-        "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041605",
-        "image": "https://cdn.qwiklabs.com/r6WXBsEm%2B4pSMiqQaMvc9RRpAVoY4I172ic7O5I%2FiU0%3D",
-        "links": [
-          {
-            "name": "Show Credential",
-            "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041605",
-            "icon": "external-link"
-          }
-        ]
-      },
-      {
-        "name": "Get Started with Dataplex Skill Badge",
-        "description": "Complete the Get Started with Dataplex skill badge to demonstrate skills in the following: use Dataplex to start creating a data mesh on Google Cloud.",
-        "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12052002",
-        "image": "https://cdn.qwiklabs.com/95bg9lvs4ofAYzNPQvruZuta%2BoBBZ%2FOjXKHB8RIJCqU%3D",
-        "links": [
-          {
-            "name": "Show Credential",
-            "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12052002",
-            "icon": "external-link"
-          }
-        ]
-      }
-    ]
-  }
+  "certificates": [
+    {
+      "name": "GitHub Foundations",
+      "description": "Passing the GitHub Foundations certification exam validates subject matter expertise by measuring entry-level skills with GitHub basics like repositories, commits, branching, markdowns, and project management.",
+      "image": "/certificates-images/github-foundations.png",
+      "href": "https://www.credly.com/badges/c2640d93-f55c-4427-ac59-8ffc75e6dfea/public_url",
+      "links": [
+        {
+          "name": "Show Credential",
+          "href": "https://www.credly.com/badges/c2640d93-f55c-4427-ac59-8ffc75e6dfea/public_url",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
+      "name": "Get Started with API Gateway Skill Badge",
+      "description": "Complete the introductory Use Functions, Formulas, and Charts in Google Sheets skill badge to demonstrate skills in the following: using API Gateway to deploy, secure, and manage APIs with a fully managed gateway.",
+      "image": "https://cdn.qwiklabs.com/ekXAQNUukXGsBzIAozJKF%2FxfN27PDqYf8KJ%2BsHQOtog%3D",
+      "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12043044",
+      "links": [
+        {
+          "name": "Show Credential",
+          "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12043044",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
+      "name": "Get Started with Cloud Storage Skill Badge",
+      "description": "Complete the Get Started with Cloud Storage skill badge to demonstrate skills in the following: how to create a Cloud Storage bucket, how to use the Cloud Storage command line, and how to use Bucket Lock to protect objects in a bucket.",
+      "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041964",
+      "image": "https://cdn.qwiklabs.com/C29WcLiPHUd2uj1zMaF2MepWKhC%2Bvs7WTUMUTA4nMFU%3D",
+      "links": [
+        {
+          "name": "Show Credential",
+          "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041964",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
+      "name": "The Basics of Google Cloud Compute Skill Badge",
+      "description": "Complete the The Basics of Google Cloud Compute skill badge to demonstrate skills in the following: how to work with virtual machines (VMs), persistent disks, and web servers using Compute Engine.",
+      "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041605",
+      "image": "https://cdn.qwiklabs.com/r6WXBsEm%2B4pSMiqQaMvc9RRpAVoY4I172ic7O5I%2FiU0%3D",
+      "links": [
+        {
+          "name": "Show Credential",
+          "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12041605",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
+      "name": "Get Started with Dataplex Skill Badge",
+      "description": "Complete the Get Started with Dataplex skill badge to demonstrate skills in the following: use Dataplex to start creating a data mesh on Google Cloud.",
+      "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12052002",
+      "image": "https://cdn.qwiklabs.com/95bg9lvs4ofAYzNPQvruZuta%2BoBBZ%2FOjXKHB8RIJCqU%3D",
+      "links": [
+        {
+          "name": "Show Credential",
+          "href": "https://www.cloudskillsboost.google/public_profiles/1af47587-352a-4bd5-89d6-209192405f87/badges/12052002",
+          "icon": "external-link"
+        }
+      ]
+    }
+  ]
+}
