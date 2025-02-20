@@ -1,8 +1,8 @@
 import Socials from "@/components/Socials";
 import ResumeButton from "@/components/ResumeButton";
 import { ArrowRightIcon, ArrowDownRight } from "lucide-react";
-// import VaibhavImage from "@/../public/Vaibhav.jpg";
-// import Image from "next/image";
+import VaibhavImage from "@/../public/vaibhavToon.jpg";
+import Image from "next/image";
 import Link from "next/link";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
@@ -19,14 +19,14 @@ export default function Home() {
       <article className="mt-8 flex flex-col gap-16 pb-16">
         <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-center">
           {/* When inserting an image, change md:justify-center to md:justify-between */}
-          {/* <Image
+          <Image
             className="rounded-lg"
             src={VaibhavImage}
             alt="Photo of Vaibhav"
-            width={175}
-            height={175}
+            width={200}
+            height={200}
             priority
-          /> */}
+          />
           <div className="flex flex-col">
             <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
             <p className="mt-4 font-light">
@@ -37,12 +37,10 @@ export default function Home() {
               Trust me, I&apos;m a software engineer ^_^
             </p>
             <div className="mt-4 flex items-end gap-1">
-              <Link href="/about">
                 <div className="flex">
                   <p className="font-semibold">Ask the chatbot anything about me</p>
                   <ArrowDownRight className="size-5 animate-bounce" />
                 </div>
-              </Link>
             </div>
             <section className="mt-8 flex items-center gap-8">
               <Link href="/resume.pdf" target="_blank">
