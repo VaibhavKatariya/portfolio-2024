@@ -1,6 +1,8 @@
 "use client";
 
 import ChatHeader from "./ChatHeader";
+import ChatInput from "./ChatInput";
+import ChatMessages from "./ChatMessages";
 import {
   Accordion,
   AccordionContent,
@@ -19,6 +21,8 @@ export default function Chat() {
           <ChatHeader />
         </AccordionTrigger>
         <AccordionContent className="flex max-h-96 min-h-80 flex-col justify-between p-0">
+          <ChatMessages />
+          <ChatInput />
           {/* Chat input and message goes here */}
         </AccordionContent>
       </AccordionItem>

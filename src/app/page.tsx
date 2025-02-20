@@ -1,6 +1,6 @@
 import Socials from "@/components/Socials";
 import ResumeButton from "@/components/ResumeButton";
-import { ArrowRightIcon, ArrowUpRight } from "lucide-react";
+import { ArrowRightIcon, ArrowDownRight } from "lucide-react";
 // import VaibhavImage from "@/../public/Vaibhav.jpg";
 // import Image from "next/image";
 import Link from "next/link";
@@ -39,8 +39,8 @@ export default function Home() {
             <div className="mt-4 flex items-end gap-1">
               <Link href="/about">
                 <div className="flex">
-                  <p className="font-semibold">More about me</p>
-                  <ArrowUpRight className="size-5 animate-bounce" />
+                  <p className="font-semibold">Ask the chatbot anything about me</p>
+                  <ArrowDownRight className="size-5 animate-bounce" />
                 </div>
               </Link>
             </div>
