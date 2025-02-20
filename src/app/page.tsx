@@ -37,12 +37,10 @@ export default function Home() {
               Trust me, I&apos;m a software engineer ^_^
             </p>
             <div className="mt-4 flex items-end gap-1">
-              <Link href="/about">
                 <div className="flex">
                   <p className="font-semibold">Ask the chatbot anything about me</p>
                   <ArrowDownRight className="size-5 animate-bounce" />
                 </div>
-              </Link>
             </div>
             <section className="mt-8 flex items-center gap-8">
               <Link href="/resume.pdf" target="_blank">
