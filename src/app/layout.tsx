@@ -7,6 +7,7 @@ import { Calistoga, Inter } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import Chat from "@/components/chat";
+import { ChatProvider } from "@/contexts/ChatContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -50,8 +51,10 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="grow">{children}</main>
-          <Chat/>
+          <ChatProvider>
+            <main className="grow">{children}</main>
+          </ChatProvider>
+          <Chat />
           <Footer />
         </Providers>
       </body>

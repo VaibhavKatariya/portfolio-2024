@@ -9,9 +9,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import { useChatbot } from "@/contexts/ChatContext";
 
 export default function Chat() {
+  const { isVisible } = useChatbot();
+
   return (
+    isVisible && (
     <Accordion type="single" collapsible className="relative z-40">
       <AccordionItem
         value="item-1"
@@ -23,9 +27,9 @@ export default function Chat() {
         <AccordionContent className="flex max-h-96 min-h-80 flex-col justify-between p-0">
           <ChatMessages />
           <ChatInput />
-          {/* Chat input and message goes here */}
         </AccordionContent>
       </AccordionItem>
     </Accordion>
+    )
   );
 }
