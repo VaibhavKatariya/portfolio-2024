@@ -24,7 +24,12 @@ const getHistory = () => {
   return [];
 };
 
-const saveHistory = (history: any[]) => {
+interface ChatHistory {
+  user: string;
+  message: string;
+}
+
+const saveHistory = (history: ChatHistory[]) => {
   if (typeof window !== "undefined") {
     console.log("before setting "+history)
     sessionStorage.setItem("chatHistory", JSON.stringify(history));

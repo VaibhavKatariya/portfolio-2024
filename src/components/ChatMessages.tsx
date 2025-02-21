@@ -22,17 +22,16 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
   }, [messages]);
 
   return (
-    <div className="h-full overflow-y-auto p-3" ref={scrollRef}>
+    <div className="h-full max-w-full overflow-y-auto p-3" ref={scrollRef}>
       {messages.length > 0 ? (
         <div className="flex flex-col space-y-3">
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-2 rounded-md max-w-[75%] ${
-                msg.role === "user"
+              className={`p-2 rounded-md max-w-[75%] ${msg.role === "user"
                   ? "bg-blue-500 text-white self-end"
                   : "bg-gray-200 self-start dark:bg-zinc-800"
-              }`}
+                }`}
             >
               <Markdown
                 components={{
@@ -45,15 +44,22 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
                   ),
                   p: (props) => <p className="mt-3 first:mt-0" {...props} />,
                   ul: (props) => (
-                    <ul
-                      className="mt-3 list-inside list-disc first:mt-0"
+                    <ul className="mt-3 list-inside list-disc first:mt-0" {...props} />
+                  ),
+                  pre: (props) => (
+                    <pre
+                      className="overflow-x-auto whitespace-pre-wrap break-words p-2 rounded-md bg-gray-100 dark:bg-zinc-900"
                       {...props}
                     />
+                  ),
+                  code: (props) => (
+                    <code className="break-words" {...props} />
                   ),
                 }}
               >
                 {msg.text}
               </Markdown>
+
             </div>
           ))}
         </div>

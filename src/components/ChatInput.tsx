@@ -3,7 +3,7 @@ import { SendHorizontal, Trash } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-export default function ChatInput({ onSendMessage }: { onSendMessage: (message: string) => void }) {
+export default function ChatInput({ clearChat, onSendMessage }: { clearChat: () => void; onSendMessage: (message: string) => void }) {
   const [input, setInput] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,8 +15,7 @@ export default function ChatInput({ onSendMessage }: { onSendMessage: (message: 
   };
 
   const handleClearChat = () => {
-    sessionStorage.removeItem("chatHistory");
-    window.location.reload(); 
+    clearChat();
   };
 
   return (

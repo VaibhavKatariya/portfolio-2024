@@ -12,17 +12,19 @@ export default function Chat() {
   const { isVisible } = useChatbot();
   const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
 
-  // Load chat history from session storage on mount
+
   useEffect(() => {
     const savedHistory = sessionStorage.getItem("chatHistory");
     if (savedHistory) {
       const parsedHistory = JSON.parse(savedHistory);
-      setMessages(parsedHistory.map((entry: any) => ({
+      setMessages(parsedHistory.map((entry: { role: string; parts: { text: string }[] }) => ({
         role: entry.role,
         text: entry.parts[0].text,
       })));
     }
   }, []);
+
+
 
   const handleSendMessage = async (userInput: string) => {
     if (!userInput.trim()) return;
@@ -36,6 +38,11 @@ export default function Chat() {
     setMessages([...newMessages, { role: "model", text: botResponse }]);
   };
 
+  const clearChat = () => {
+    setMessages([]);
+    sessionStorage.removeItem("chatHistory");
+  }
+
   return (
     isVisible && (
       <Accordion type="single" collapsible className="relative z-40">
@@ -45,7 +52,7 @@ export default function Chat() {
           </AccordionTrigger>
           <AccordionContent className="flex max-h-96 min-h-80 flex-col justify-between p-0">
             <ChatMessages messages={messages} />
-            <ChatInput onSendMessage={handleSendMessage} />
+            <ChatInput clearChat={clearChat} onSendMessage={handleSendMessage} />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
