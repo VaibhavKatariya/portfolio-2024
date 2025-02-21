@@ -10,7 +10,7 @@ const skills = [
     { category: "Tools", items: ["Docker", "Vercel", "npm", "GitHub", "Netlify", "Yarn", "Figma", "Notion", "Git"] },
     { category: "Cloud Platforms", items: ["AWS", "Vercel", "Heroku", "Netlify", "Firebase", "GCP (Google Cloud Platform)"] },
     { category: "Version Control", items: ["Git", "GitHub", "GitLab"] },
-    { category: "Other", items: ["ESLint", "Prettier", "REST APIs", "Postman", "GitHub Actions", "Zod"] }
+    { category: "Other", items: ["ESLint", "Prettier", "REST APIs", "Postman", "GitHub Actions", "Zod", "Gemini AI"] }
   ];
   
 
