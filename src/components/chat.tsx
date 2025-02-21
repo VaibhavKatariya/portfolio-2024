@@ -11,37 +11,46 @@ import { sendMessageToGemini } from "@/utils/geminiApi";
 export default function Chat() {
   const { isVisible } = useChatbot();
   const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
-
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const savedHistory = sessionStorage.getItem("chatHistory");
     if (savedHistory) {
-      const parsedHistory = JSON.parse(savedHistory);
-      setMessages(parsedHistory.map((entry: { role: string; parts: { text: string }[] }) => ({
-        role: entry.role,
-        text: entry.parts[0].text,
-      })));
+      try {
+        const parsedHistory = JSON.parse(savedHistory);
+        setMessages(parsedHistory.map((entry: { role: string; parts: { text: string }[] }) => ({
+          role: entry.role,
+          text: entry.parts[0].text,
+        })));
+      } catch (err) {
+        console.error("Error loading chat history:", err);
+        setError("Failed to load chat history.");
+      }
     }
   }, []);
-
-
 
   const handleSendMessage = async (userInput: string) => {
     if (!userInput.trim()) return;
 
-    // Optimistically update UI
+    setError(null);
+
     const newMessages = [...messages, { role: "user", text: userInput }];
     setMessages(newMessages);
 
-    // Send message to Gemini
-    const botResponse = await sendMessageToGemini(userInput);
-    setMessages([...newMessages, { role: "model", text: botResponse }]);
+    try {
+      const botResponse = await sendMessageToGemini(userInput);
+      setMessages([...newMessages, { role: "model", text: botResponse }]);
+    } catch (err) {
+      console.error("Error sending message:", err);
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   const clearChat = () => {
     setMessages([]);
+    setError(null); 
     sessionStorage.removeItem("chatHistory");
-  }
+  };
 
   return (
     isVisible && (
@@ -51,7 +60,7 @@ export default function Chat() {
             <ChatHeader />
           </AccordionTrigger>
           <AccordionContent className="flex max-h-96 min-h-80 flex-col justify-between p-0">
-            <ChatMessages messages={messages} />
+            <ChatMessages messages={messages} error={error} /> 
             <ChatInput clearChat={clearChat} onSendMessage={handleSendMessage} />
           </AccordionContent>
         </AccordionItem>

@@ -10,9 +10,10 @@ interface Message {
 
 interface ChatMessagesProps {
   messages: Message[];
+  error?: string | null; // Accept error as a prop
 }
 
-export default function ChatMessages({ messages }: ChatMessagesProps) {
+export default function ChatMessages({ messages, error }: ChatMessagesProps) {
   // Scroll to new messages automatically
   const scrollRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -28,10 +29,11 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-2 rounded-md max-w-[75%] ${msg.role === "user"
+              className={`p-2 rounded-md max-w-[75%] ${
+                msg.role === "user"
                   ? "bg-blue-500 text-white self-end"
                   : "bg-gray-200 self-start dark:bg-zinc-800"
-                }`}
+              }`}
             >
               <Markdown
                 components={{
@@ -59,7 +61,6 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
               >
                 {msg.text}
               </Markdown>
-
             </div>
           ))}
         </div>
@@ -72,6 +73,13 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
             relevant information!
           </p>
         </div>
+      )}
+
+      {/* Error Message */}
+      {error && (
+        <p className="text-center text-xs text-rose-500 mt-3">
+          {error}
+        </p>
       )}
     </div>
   );

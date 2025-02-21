@@ -31,24 +31,25 @@ interface ChatHistory {
 
 const saveHistory = (history: ChatHistory[]) => {
   if (typeof window !== "undefined") {
-    console.log("before setting "+history)
+    console.log("before setting " + history)
     sessionStorage.setItem("chatHistory", JSON.stringify(history));
   }
 };
 
 export const sendMessageToGemini = async (userInput: string) => {
-  const history = getHistory();
-  
-  const chatSession = model.startChat({
-    generationConfig,
-    history
-  });
+    const history = getHistory();
 
-  const result = await chatSession.sendMessage(userInput);
-  const responseText = result.response.text();
+    const chatSession = model.startChat({
+      generationConfig,
+      history,
+    });
 
-  saveHistory(history); 
+    const result = await chatSession.sendMessage(userInput);
+    const responseText = result.response.text();
 
-  return responseText;
+    saveHistory(history);
+
+    return responseText;
 };
+
 
