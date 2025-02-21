@@ -1,4 +1,4 @@
-import { Bot } from "lucide-react";
+import { Bot, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Markdown from "react-markdown";
@@ -10,17 +10,19 @@ interface Message {
 
 interface ChatMessagesProps {
   messages: Message[];
-  error?: string | null; // Accept error as a prop
+  error?: string | null;
+  isLoading?: boolean; // Accept loading state
 }
 
-export default function ChatMessages({ messages, error }: ChatMessagesProps) {
-  // Scroll to new messages automatically
+export default function ChatMessages({ messages, error, isLoading }: ChatMessagesProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, isLoading]);
+
+  const isLastMessageUser = messages.length > 0 && messages[messages.length - 1].role === "user";
 
   return (
     <div className="h-full max-w-full overflow-y-auto p-3" ref={scrollRef}>
@@ -63,6 +65,17 @@ export default function ChatMessages({ messages, error }: ChatMessagesProps) {
               </Markdown>
             </div>
           ))}
+          
+          {/* Loading Indicator */}
+          {isLoading && isLastMessageUser && (
+            <div className="flex items-center justify-center">
+              <Loader2 className="mr-1.5 size-3 animate-spin text-muted-foreground" />
+              <p className="text-center text-xs text-muted-foreground">
+                Thinking...
+              </p>
+            </div>
+          )}
+
         </div>
       ) : (
         <div className="flex h-full flex-col items-center justify-center mt-16 gap-2">

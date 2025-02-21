@@ -12,6 +12,7 @@ export default function Chat() {
   const { isVisible } = useChatbot();
   const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false); // Loading state
 
   useEffect(() => {
     const savedHistory = sessionStorage.getItem("chatHistory");
@@ -33,6 +34,7 @@ export default function Chat() {
     if (!userInput.trim()) return;
 
     setError(null);
+    setIsLoading(true); // Start loading
 
     const newMessages = [...messages, { role: "user", text: userInput }];
     setMessages(newMessages);
@@ -43,12 +45,15 @@ export default function Chat() {
     } catch (err) {
       console.error("Error sending message:", err);
       setError("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
 
   const clearChat = () => {
     setMessages([]);
-    setError(null); 
+    setError(null);
+    setIsLoading(false);
     sessionStorage.removeItem("chatHistory");
   };
 
@@ -60,7 +65,7 @@ export default function Chat() {
             <ChatHeader />
           </AccordionTrigger>
           <AccordionContent className="flex max-h-96 min-h-80 flex-col justify-between p-0">
-            <ChatMessages messages={messages} error={error} /> 
+            <ChatMessages messages={messages} error={error} isLoading={isLoading} />
             <ChatInput clearChat={clearChat} onSendMessage={handleSendMessage} />
           </AccordionContent>
         </AccordionItem>
