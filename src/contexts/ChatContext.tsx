@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 const ChatContext = createContext({
   isVisible: true,
@@ -15,9 +15,21 @@ interface Props {
 
 export function ChatProvider({ children }: Props) {
   const [isVisible, setIsVisible] = useState(true);
-  
+
+  // Load the stored preference from localStorage
+  useEffect(() => {
+    const storedPreference = localStorage.getItem("chatbotVisibility");
+    if (storedPreference !== null) {
+      setIsVisible(storedPreference === "true");
+    }
+  }, []);
+
   const toggleChatbot = () => {
-    setIsVisible(!isVisible);
+    setIsVisible((prev) => {
+      const newState = !prev;
+      localStorage.setItem("chatbotVisibility", newState.toString());
+      return newState;
+    });
   };
 
   return (
