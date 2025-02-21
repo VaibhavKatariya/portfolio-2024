@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY; // Use env variable for security
+const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || "";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -26,30 +26,24 @@ const getHistory = () => {
 
 const saveHistory = (history: any[]) => {
   if (typeof window !== "undefined") {
+    console.log("before setting "+history)
     sessionStorage.setItem("chatHistory", JSON.stringify(history));
   }
 };
 
 export const sendMessageToGemini = async (userInput: string) => {
   const history = getHistory();
-
+  
   const chatSession = model.startChat({
     generationConfig,
-    history,
+    history
   });
 
   const result = await chatSession.sendMessage(userInput);
-  console.log(result)
   const responseText = result.response.text();
 
-  // Update history
-  const updatedHistory = [
-    ...history,
-    { role: "user", parts: [{ text: userInput }] },
-    { role: "model", parts: [{ text: responseText }] },
-  ];
-
-  saveHistory(updatedHistory);
+  saveHistory(history); 
 
   return responseText;
 };
+
