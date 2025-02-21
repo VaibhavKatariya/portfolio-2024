@@ -31,6 +31,8 @@ export default function ProjectPage() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (isSubmitting) return; 
+    
     if (!captchaVerified) {
       toast.error("Please complete the captcha.");
       return;
@@ -45,7 +47,6 @@ export default function ProjectPage() {
         form.reset();
         setIsSubmitted(true);
         toast.success("Message submitted successfully!");
-        setIsSubmitting(false);
 
         setTimeout(() => {
           router.push("/");
@@ -130,6 +131,7 @@ export default function ProjectPage() {
                 <Button
                   type="submit"
                   className="w-full disabled:opacity-50"
+                  disabled={isSubmitting || isSubmitted}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center">
