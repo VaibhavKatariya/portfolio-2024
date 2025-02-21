@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const lastUpdated = "Nov 2024";
+const lastUpdated = "Feb 2025";
 
 export default function Page() {
   return (
@@ -18,6 +18,11 @@ export default function Page() {
         <h2 className="title">Information Collection</h2>
         <p>
           As this is a static portfolio site, I do not actively collect personal information from visitors, except as described below. However, I use Google Analytics to track general user interactions, such as page views, clicks, and other engagement metrics. This helps me understand how visitors are interacting with the site and improve the user experience.
+        </p>
+
+        <h3>Chatbot Conversations</h3>
+        <p>
+          If you send a message through the chatbot, it might be stored for caching and training purposes. Please avoid sharing any confidential or sensitive information in the chat.
         </p>
 
         <h3>Google Analytics</h3>
@@ -42,6 +47,7 @@ export default function Page() {
           <li>To enhance the website based on your feedback</li>
           <li>To respond to your questions or comments</li>
           <li>To analyze website traffic and improve user experience using Google Analytics</li>
+          <li>To improve chatbot interactions and functionality</li>
         </ul>
         
         <h2 className="title">Information Sharing</h2>
