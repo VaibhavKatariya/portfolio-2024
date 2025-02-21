@@ -9,7 +9,6 @@ import LinkWithIcon from "@/components/LinkWithIcon";
 import SectionCards from "@/components/SectionCards";
 import SkillsSection from "@/components/SkillSection";
 
-const Vaibhav_Birth_Year = 2005;
 const LIMIT = 2;
 
 export default function Home() {
@@ -30,7 +29,7 @@ export default function Home() {
           <div className="flex flex-col">
             <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
             <p className="mt-4 font-light">
-              {new Date().getFullYear() - Vaibhav_Birth_Year}
+            {Math.floor((new Date().getTime() - new Date(2005, 9, 22).getTime()) / (1000 * 60 * 60 * 24 * 365.25))}
               -year-old Full-Stack developer from India 🇮🇳
             </p>
             <p className="mt-2 font-light">
