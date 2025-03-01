@@ -15,10 +15,6 @@ const navLinks = [
     href: "/projects",
   },
   {
-    name: "Certificates",
-    href: "/certificates",
-  },
-  {
     name: "Blog",
     href: "/blog", 
   },
@@ -26,10 +22,14 @@ const navLinks = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    name: "Certificates",
+    href: "/certificates",
+  },
 ];
 
 export default function Header() {
-  const pathname = usePathname(); // Get current pathname
+  const pathname = usePathname(); 
 
   return (
     <header className="sticky top-0 z-50 bg-background/75 py-6 backdrop-blur-sm">

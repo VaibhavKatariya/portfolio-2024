@@ -19,6 +19,10 @@ export default function Footer() {
           <Link className="link font-bold" href="/blog">
             Blog
           </Link>
+          {" | "}
+          <Link className="link font-bold" href="/contact">
+            Contact
+          </Link>
         </p>
       </section>
     </footer>

@@ -79,7 +79,7 @@ export default async function Home() {
               href="/blog"
               position="right"
               icon={<ArrowRightIcon className="size-5" />}
-              text="view more"
+              text="View More"
             />
           </div>
           <Posts posts={posts} />
