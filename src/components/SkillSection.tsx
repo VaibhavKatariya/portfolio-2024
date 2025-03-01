@@ -2,17 +2,16 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
 const skills = [
-    { category: "Languages", items: ["JavaScript", "TypeScript", "C", "C++"] },
+    { category: "Languages", items: ["JavaScript", "TypeScript", "C", "C++", "Python"] },
     { category: "Frontend", items: ["React", "Next.js", "HTML", "CSS", "Tailwind CSS", "Shad CN", "Chakra UI"] },
-    { category: "Backend", items: ["Node.js", "Express.js", "Firebase", "SupaBase"] },
+    { category: "Backend", items: ["Node.js", "Express.js", "Firebase", "SupaBase", "Next.js"] },
     { category: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "FireStore", "Firebase Realtime Database"] },
-    { category: "Authentication & Security", items: ["JWT", "OAuth", "Firebase Auth", "Auth0", "NextAuth", "AWS Cognito"] },
-    { category: "Tools", items: ["Docker", "Vercel", "npm", "GitHub", "Netlify", "Yarn", "Figma", "Notion", "Git"] },
+    { category: "Authentication & Security", items: ["JWT", "OAuth", "Auth0" ,"Firebase Auth", "NextAuth", "AWS Cognito"] },
     { category: "Cloud Platforms", items: ["AWS", "Vercel", "Heroku", "Netlify", "Firebase", "GCP (Google Cloud Platform)"] },
-    { category: "Version Control", items: ["Git", "GitHub", "GitLab"] },
+    { category: "Tools", items: ["Docker", "Vercel", "npm", "GitHub", "Netlify", "Yarn", "Figma", "Notion", "Git", "Mailgun", "Apps Script"] },
+    { category: "DevOps & CI/CD", items: ["Docker", "GitHub Actions", "GitLab CI/CD"] },
     { category: "Other", items: ["ESLint", "Prettier", "REST APIs", "Postman", "GitHub Actions", "Zod", "Gemini AI"] }
   ];
-  
 
 export default function SkillsSection() {
   return (
