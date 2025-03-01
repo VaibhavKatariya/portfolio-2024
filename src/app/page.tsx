@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <article className="mt-8 flex flex-col gap-16 pb-16">
-        <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-center">
+        <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
           {/* When inserting an image, change md:justify-center to md:justify-between */}
           <Image
             className="rounded-lg"
