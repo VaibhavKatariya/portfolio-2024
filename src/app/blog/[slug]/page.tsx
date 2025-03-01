@@ -6,13 +6,13 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import path from "path";
+import Breadcrumbs from "@/components/Breadcrumbs"; 
 
 const blogDirectory = path.join(process.cwd(), "content");
 
 export async function generateStaticParams() {
   const posts = await getPosts(blogDirectory);
   const slugs = posts.map((post) => ({ slug: post.slug }));
-
   return slugs;
 }
 
@@ -27,8 +27,16 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const { metadata, content } = post;
   const { title, image, publishedAt } = metadata;
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+    { label: title || slug },
+  ];
+
   return (
     <article className="mt-8 flex flex-col gap-8 pb-16">
+      <Breadcrumbs items={breadcrumbItems} />
+
       <LinkWithIcon
         href="/blog"
         position="left"
