@@ -16,7 +16,7 @@ export default function Footer() {
             Privacy
           </Link>
           {" | "}
-          <Link target="_blank" className="link font-bold" href="https://blog.kaily.in">
+          <Link className="link font-bold" href="/blog">
             Blog
           </Link>
         </p>
