@@ -8,10 +8,15 @@ import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import SectionCards from "@/components/SectionCards";
 import SkillsSection from "@/components/SkillSection";
+import Posts from "@/components/Posts";
+import { getPosts } from "@/lib/posts";
+import path from "path";
 
+const blogDirectory = path.join(process.cwd(), "content");
 const LIMIT = 2;
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts(blogDirectory, LIMIT);
 
   return (
     <>
@@ -29,17 +34,17 @@ export default function Home() {
           <div className="flex flex-col">
             <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
             <p className="mt-4 font-light">
-            {Math.floor((new Date().getTime() - new Date(2005, 9, 22).getTime()) / (1000 * 60 * 60 * 24 * 365.25))}
+              {Math.floor((new Date().getTime() - new Date(2005, 9, 22).getTime()) / (1000 * 60 * 60 * 24 * 365.25))}
               -year-old Full-Stack developer from India 🇮🇳
             </p>
             <p className="mt-2 font-light">
               Trust me, I&apos;m a software engineer ^_^
             </p>
             <div className="mt-4 flex items-end gap-1">
-                <div className="flex">
-                  <p className="font-semibold">Ask the chatbot anything about me</p>
-                  <ArrowDownRight className="size-5 animate-bounce" />
-                </div>
+              <div className="flex">
+                <p className="font-semibold">Ask the chatbot anything about me</p>
+                <ArrowDownRight className="size-5 animate-bounce" />
+              </div>
             </div>
             <section className="mt-8 flex items-center gap-8">
               <Link href="/resume.pdf" target="_blank">
@@ -66,6 +71,19 @@ export default function Home() {
         </section>
 
         <SkillsSection />
+
+        <section className="flex flex-col gap-8">
+          <div className="flex justify-between">
+            <h2 className="title text-3xl">Recent Posts</h2>
+            <LinkWithIcon
+              href="/blog"
+              position="right"
+              icon={<ArrowRightIcon className="size-5" />}
+              text="view more"
+            />
+          </div>
+          <Posts posts={posts} />
+        </section>
 
         <section className="flex flex-col gap-8">
           <div className="flex justify-between">
