@@ -1,6 +1,19 @@
 {
   "certificates": [
     {
+      "name": "Big Data & Data Science Bootcamp",
+      "description": "Passing the Big Data & Data Science Bootcamp validates expertise in data processing, analytics, and machine learning. It demonstrates skills in handling large datasets and using industry-standard tools for data-driven decision-making.",
+      "image": "/certificates-images/big-data-bootcamp.png",
+      "href": "https://www.credly.com/badges/c2640d93-f55c-4427-ac59-8ffc75e6dfea/public_url",
+      "links": [
+        {
+          "name": "Show Credential",
+          "href": "https://www.credly.com/badges/c2640d93-f55c-4427-ac59-8ffc75e6dfea/public_url",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
       "name": "GitHub Foundations",
       "description": "Passing the GitHub Foundations certification exam validates subject matter expertise by measuring entry-level skills with GitHub basics like repositories, commits, branching, markdowns, and project management.",
       "image": "/certificates-images/github-foundations.png",

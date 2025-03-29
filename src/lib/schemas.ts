@@ -14,7 +14,7 @@ const project = z.object({
   href: z.string().url().optional(),
   image: z.string().optional(),
   tags: z.array(z.string()).optional(),
-  links: z.array(iconLink),
+  links: z.array(iconLink).optional(),
 });
 export const projectSchema = z.object({ projects: z.array(project) });
 export const certificateSchema = z.object({ certificates: z.array(project) });
