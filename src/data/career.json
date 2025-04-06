@@ -8,11 +8,16 @@
       "start": "Sept 2024",
       "description": [
         "Contributed to the development of the official website of the club.",
-        "Sucessfully conducted Google Cloud Study Jams and other events."
+        "Sucessfully conducted Clubs Annual Hackathon Bitbox 5.0"
       ],
       "links": [
         {
           "name": "GDG 128 Site",
+          "href": "https://gdg-jiit.com/teams#core",
+          "icon": "globe"
+        },
+        {
+          "name": "View code on GitHub",
           "href": "https://github.com/VaibhavKatariya/GDSC-128-Site",
           "icon": "github"
         }
