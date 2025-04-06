@@ -1,6 +1,33 @@
 {
   "projects": [
     {
+      "name": "Autamail",
+      "description": "Autamail is an email management portal built with Next.js, designed to automate and streamline communications for BitBox's Hackathon chief guests, sponsors, and participants.",
+      "image": "/projects/autamail.png",
+      "href": "https://mailing.gdg-jiit.com/",
+      "tags": [
+        "Next.js",
+        "JavaScript",
+        "TailwindCSS",
+        "ShadCn",
+        "Full-Stack",
+        "Mailgun",
+        "Firebase"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/VaibhavKatariya/Autamail",
+          "icon": "github"
+        },
+        {
+          "name": "Demo",
+          "href": "https://mailing.gdg-jiit.com/",
+          "icon": "external-link"
+        }
+      ]
+    },
+    {
       "name": "Portfolio Website 2024",
       "description": "I’m excited to share a clean, functional site that showcases my projects and skills while providing a user-friendly experience.",
       "image": "/projects/portfolio-2024.png",

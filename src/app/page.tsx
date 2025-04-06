@@ -70,6 +70,7 @@ export default async function Home() {
           <SectionCards type="projects" limit={LIMIT} />
         </section>
 
+        {/* Skill Section */}
         <SkillsSection />
 
         <section className="flex flex-col gap-8">
