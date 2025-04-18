@@ -5,17 +5,27 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { PaperPlaneIcon, ReloadIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from "sonner";
 import Head from "next/head";
 import { useRouter } from "next/navigation";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export default function ProjectPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [captchaVerified, setCaptchaVerified] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [captchaVerified, setCaptchaVerified] = useState<boolean>(false);
   const router = useRouter();
 
   const onCaptchaChange = (token: string | null) => {
@@ -28,34 +38,51 @@ export default function ProjectPage() {
     }
   };
 
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (isSubmitting) return; 
-    
+    if (isSubmitting) return;
+
     if (!captchaVerified) {
       toast.error("Please complete the captcha.");
       return;
     }
 
-    const form = formRef.current;
+    try {
+      setIsSubmitting(true);
 
-    if (form) {
-      try {
-        setIsSubmitting(true);
-        form.submit();
-        form.reset();
-        setIsSubmitted(true);
-        toast.success("Message submitted successfully!");
+      const formDataToSend = new FormData();
+      formDataToSend.append("entry.2005620554", formData.name);
+      formDataToSend.append("entry.1045781291", formData.email);
+      formDataToSend.append("entry.839337160", formData.message);
 
-        setTimeout(() => {
-          router.push("/");
-        }, 5000);
-      } catch (error) {
-        toast.error("Error submitting the form. Please try again.");
-        console.error(error);
-        setIsSubmitting(false);
-      }
+      const response = await fetch(
+        "https://docs.google.com/forms/d/1bT9JelPLsTjGVvwe6ESLvs-PAicLfnh_vY6RZoNCPzU/formResponse",
+        {
+          method: "POST",
+          body: formDataToSend,
+          mode: "no-cors",
+        }
+      );
+
+      setFormData({ name: "", email: "", message: "" });
+      setIsSubmitted(true);
+      toast.success("Message submitted successfully!");
+
+      setTimeout(() => {
+        router.push("/");
+      }, 5000);
+    } catch (error) {
+      toast.error("Error submitting the form. Please try again.");
+      console.error(error);
+      setIsSubmitting(false);
     }
   };
 
@@ -72,15 +99,8 @@ export default function ProjectPage() {
             { label: "Contact" },
           ]}
         />
-        <iframe name="iframe_form" id="iframe_form" style={{ display: "none" }}></iframe>
 
-        <form
-          ref={formRef}
-          action="https://docs.google.com/forms/d/1bT9JelPLsTjGVvwe6ESLvs-PAicLfnh_vY6RZoNCPzU/formResponse"
-          method="POST"
-          target="iframe_form"
-          onSubmit={handleSubmit}
-        >
+        <form onSubmit={handleSubmit}>
           {isSubmitted ? (
             <div className="bg-green-100 p-4 text-green-800 rounded-md">
               Thank you! Your message has been submitted.
@@ -91,30 +111,36 @@ export default function ProjectPage() {
                 <div className="h-16">
                   <Input
                     id="name"
-                    name="entry.2005620554"
+                    name="name"
                     type="text"
                     placeholder="Name"
                     autoComplete="given-name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
                 <div className="h-16">
                   <Input
                     id="email"
-                    name="entry.1045781291"
+                    name="email"
                     type="email"
                     placeholder="Email"
                     autoComplete="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
                 <div className="h-32 sm:col-span-2">
                   <Textarea
                     rows={4}
-                    name="entry.839337160"
+                    name="message"
                     placeholder="Leave feedback or say hello."
                     autoComplete="Message"
                     className="resize-none"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
@@ -148,7 +174,7 @@ export default function ProjectPage() {
                 <p className="mt-4 text-xs text-muted-foreground">
                   By submitting this form, you agree to the{" "}
                   <Link href="/privacy" className="font-semibold">
-                    privacy&nbsp;policy.
+                    privacy policy.
                   </Link>
                 </p>
               </div>
