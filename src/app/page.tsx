@@ -1,6 +1,6 @@
 import Socials from "@/components/Socials";
 import ResumeButton from "@/components/ResumeButton";
-import { ArrowRightIcon, ArrowDownRight } from "lucide-react";
+import { ArrowRightIcon, ArrowDownRight, ArrowDown } from "lucide-react";
 import VaibhavImage from "@/../public/vaibhavToon.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,10 +31,13 @@ export default async function Home() {
             height={200}
             priority
           />
-          <div className="flex flex-col">
+          <div className="flex max-w-[320px] flex-col sm:max-w-full">
             <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
             <p className="mt-4 font-light">
-              {Math.floor((new Date().getTime() - new Date(2005, 9, 22).getTime()) / (1000 * 60 * 60 * 24 * 365.25))}
+              {Math.floor(
+                (new Date().getTime() - new Date(2005, 9, 22).getTime()) /
+                  (1000 * 60 * 60 * 24 * 365.25)
+              )}
               -year-old Full-Stack developer from India 🇮🇳
             </p>
             <p className="mt-2 font-light">
@@ -42,8 +45,11 @@ export default async function Home() {
             </p>
             <div className="mt-4 flex items-end gap-1">
               <div className="flex">
-                <p className="font-semibold">Ask the chatbot anything about me</p>
-                <ArrowDownRight className="size-5 animate-bounce" />
+                <p className="font-semibold">
+                  Ask the chatbot anything about me
+                </p>
+                <ArrowDownRight className="hidden size-5 animate-bounce sm:block" />
+                <ArrowDown className="block size-5 animate-bounce sm:hidden" />
               </div>
             </div>
             <section className="mt-8 flex items-center gap-8">
@@ -88,7 +94,9 @@ export default async function Home() {
 
         <section className="flex flex-col gap-8">
           <div className="flex justify-between">
-            <h2 className="title text-2xl sm:text-3xl">License & Certifications</h2>
+            <h2 className="title text-2xl sm:text-3xl">
+              License & Certifications
+            </h2>
             <LinkWithIcon
               href="/certificates"
               position="right"
@@ -98,7 +106,6 @@ export default async function Home() {
           </div>
           <SectionCards type="certificates" limit={LIMIT} />
         </section>
-
       </article>
     </>
   );
