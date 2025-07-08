@@ -1,14 +1,14 @@
 {
   "socials": [
     {
-      "name": "GitHub",
-      "href": "https://github.com/VaibhavKatariya",
-      "icon": "github"
-    },
-    {
       "name": "LinkedIn",
       "href": "https://linkedin.com/in/vaibhavkatariyaa",
       "icon": "linkedin"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/VaibhavKatariya",
+      "icon": "github"
     },
     {
       "name": "Email",
