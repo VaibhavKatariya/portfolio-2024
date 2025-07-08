@@ -7,8 +7,9 @@
       "logo": "/career/dsc_jiit_logo.jpeg",
       "start": "Sept 2024",
       "description": [
-        "Contributed to the development of the official website of the club.",
-        "Sucessfully conducted Clubs Annual Hackathon Bitbox 5.0"
+        "Built and maintained the official website of the club.",
+        "Developed Autamail, a web application to automate email communication for sponsors, chief guests, and participants of Bitbox 5.0",
+        "Collaborated with the organizing team to successfully conduct the club's flagship hackathon, Bitbox 5.0"
       ],
       "links": [
         {
@@ -17,10 +18,27 @@
           "icon": "globe"
         },
         {
+          "name": "Autamail",
+          "href": "https://github.com/VaibhavKatariya/Autamail",
+          "icon": "github"
+        },
+        {
           "name": "View code on GitHub",
           "href": "https://github.com/VaibhavKatariya/GDSC-128-Site",
           "icon": "github"
         }
+      ]
+    },
+    {
+      "name": "Core Team Member",
+      "href": "https://cicr.in",
+      "title": "CICR JIIT 128",
+      "logo": "/career/cicrjiit128_logo.jpeg",
+      "start": "Jan 2025",
+      "description": [
+        "Built and programmed autonomous drones as part of club projects and demonstrations.",
+        "Actively mentored juniors during Techtonic 2.0, the club's annual flagship event, by teaching concepts in AI, ML, and robotics.",
+        "Assisted in managing workshops and sessions to guide students through practical tech applications and projects."
       ]
     }
   ]
