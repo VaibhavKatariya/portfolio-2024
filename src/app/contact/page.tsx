@@ -57,7 +57,8 @@ export default function ProjectPage() {
 
     try {
       setIsSubmitting(true);
-
+      
+      if ((formData as any).honeypot) return
       const formDataToSend = new FormData();
       formDataToSend.append("entry.2005620554", formData.name);
       formDataToSend.append("entry.1045781291", formData.email);
@@ -89,15 +90,16 @@ export default function ProjectPage() {
   return (
     <>
       <Head>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
       </Head>
       <article className="mt-8 flex flex-col gap-8 pb-16">
         <h1 className="title">Contact Me</h1>
         <Breadcrumbs
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Contact" },
-          ]}
+          items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
         />
 
         <form onSubmit={handleSubmit}>
@@ -108,6 +110,14 @@ export default function ProjectPage() {
           ) : (
             <>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <div className="h-16">
+                  <input
+                    type="text"
+                    name="honeypot"
+                    style={{ display: "none" }}
+                    tabIndex={-1}
+                  />
+                </div>
                 <div className="h-16">
                   <Input
                     id="name"
