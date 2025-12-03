@@ -1,7 +1,7 @@
 import Socials from "@/components/Socials";
 import ResumeButton from "@/components/ResumeButton";
 import { ArrowRightIcon, ArrowDownRight, ArrowDown } from "lucide-react";
-import VaibhavImage from "@/../public/vaibhavToon.jpg";
+import VaibhavImage from "@/../public/VaibhavPhoto.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import Experience from "@/components/Experience";
