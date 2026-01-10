@@ -1,30 +1,40 @@
-"use client";
+"use client"
 
-import { ChatProvider } from "@/contexts/ChatContext";
-import { ThemeProvider, useTheme } from "next-themes";
-import React from "react";
-import { Toaster } from "sonner";
-import Chat from "./chat";
+import { useEffect, useState } from "react"
+import { ThemeProvider, useTheme } from "next-themes"
+import { Toaster } from "sonner"
+import { ChatProvider } from "@/contexts/ChatContext"
+import Chat from "./chat"
 
 export default function Providers({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
     <ThemeProvider
-      enableSystem
       attribute="class"
       defaultTheme="system"
+      enableSystem
       disableTransitionOnChange
     >
       <ChatProvider>
         {children}
         <Chat />
+        <ThemedToaster />
       </ChatProvider>
-      <ToastProvider />
     </ThemeProvider>
-  );
+  )
 }
 
-function ToastProvider() {
-  const { resolvedTheme } = useTheme();
+function ThemedToaster() {
+  const { resolvedTheme } = useTheme()
+
+  if (!resolvedTheme) return null
 
   return (
     <Toaster
@@ -32,5 +42,5 @@ function ToastProvider() {
       position="top-right"
       theme={resolvedTheme === "dark" ? "dark" : "light"}
     />
-  );
+  )
 }
