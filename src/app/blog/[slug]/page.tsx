@@ -6,7 +6,7 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import path from "path";
-import Breadcrumbs from "@/components/Breadcrumbs"; 
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const blogDirectory = path.join(process.cwd(), "content");
 
@@ -16,8 +16,13 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export default async function Post({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
   const post = await getPostBySlug(blogDirectory, slug);
 
   if (!post) {
