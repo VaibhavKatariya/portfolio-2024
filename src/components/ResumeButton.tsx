@@ -1,16 +1,25 @@
-'use client'
+"use client";
 
-import { Button } from './ui/button'
-import { FileDown } from 'lucide-react'
-import { sendGAEvent } from '@next/third-parties/google'
+import { Button } from "./ui/button";
+import { FileDown } from "lucide-react";
 
 const ResumeButton = () => {
-    return (
-        <Button onClick={() => sendGAEvent({event: "resumeButton" , value: "resumeButtonClicked"})} variant="outline">
-            <span className="font-semibold">Resume</span>
-            <FileDown className="ml-2 size-5" />
-        </Button>
-    )
-}
+  const trackClick = () => {
+    if (typeof window !== "undefined" && "gtag" in window) {
+      // @ts-ignore
+      window.gtag("event", "resumeButtonClicked", {
+        event_category: "engagement",
+        event_label: "Resume Button",
+      });
+    }
+  };
 
-export default ResumeButton
+  return (
+    <Button onClick={trackClick} variant="outline">
+      <span className="font-semibold">Resume</span>
+      <FileDown className="ml-2 size-5" />
+    </Button>
+  );
+};
+
+export default ResumeButton;
