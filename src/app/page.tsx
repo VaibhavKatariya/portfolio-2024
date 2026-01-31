@@ -11,6 +11,7 @@ import SkillsSection from "@/components/SkillSection";
 import Posts from "@/components/Posts";
 import { getPosts } from "@/lib/posts";
 import path from "path";
+import DynamicGreetingWord from "@/components/DynamicGreeting";
 
 const blogDirectory = path.join(process.cwd(), "content");
 const LIMIT = 2;
@@ -32,11 +33,15 @@ export default async function Home() {
             priority
           />
           <div className="flex max-w-[320px] flex-col sm:max-w-full">
-            <h1 className="title text-5xl">Hi, I&apos;m Vaibhav! 👋</h1>
+            <div className="flex flex-col">
+              <DynamicGreetingWord />
+              <h1 className="title text-5xl">I&apos;m Vaibhav! 👋</h1>
+            </div>
+
             <p className="mt-4 font-light">
               {Math.floor(
                 (new Date().getTime() - new Date(2005, 9, 22).getTime()) /
-                  (1000 * 60 * 60 * 24 * 365.25)
+                  (1000 * 60 * 60 * 24 * 365.25),
               )}
               -year-old Full-Stack developer from India 🇮🇳
             </p>
@@ -52,6 +57,18 @@ export default async function Home() {
                 <ArrowDown className="block size-5 animate-bounce sm:hidden" />
               </div>
             </div>
+
+            <p className="mt-1 text-xs font-light">
+              For any escalations, please find&nbsp;
+              <Link
+                href="/contact"
+                className="link font-semibold underline"
+                title="Contact Page"
+              >
+                Contact
+              </Link>
+            </p>
+
             <section className="mt-8 flex items-center gap-8">
               <Link href="/resume.pdf" target="_blank">
                 <ResumeButton />
