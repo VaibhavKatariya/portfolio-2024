@@ -31,7 +31,7 @@ export default function DynamicGreetingWord() {
         }
         return prev + 1;
       });
-    }, 350);
+    }, 400);
 
     return () => clearInterval(interval);
   }, [done]);
