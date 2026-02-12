@@ -17,14 +17,39 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Vaibhav Katariya",
+  title: {
+    default: "Vaibhav Katariya | Portfolio | Kaily",
+    template: "%s | Vaibhav Katariya",
+  },
   description:
-    "Explore the personal portfolio of Vaibhav Katariya, a passionate web developer proficient in modern technologies like JavaScript, Next.js, and Firebase. Discover innovative projects, insights into my development journey, and contributions to open-source communities.",
+    "Official personal portfolio of Vaibhav Katariya, also known as Vaibhav or Kaily. Showcasing projects, skills, and work in web development using Next.js, JavaScript, and Firebase.",
+  keywords: [
+    "Vaibhav Katariya",
+    "Vaibhav",
+    "Katariya",
+    "Kaily",
+    "Vaibhav portfolio",
+    "Kaily portfolio",
+    "Vaibhav Katariya developer",
+  ],
+  metadataBase: new URL("https://kaily.in"),
+  alternates: {
+    canonical: "https://kaily.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
-    title: "Vaibhav Katariya - Portfolio",
+    title: "Vaibhav Katariya | Developer Portfolio | Kaily",
     description:
-      "Dive into Vaibhav Katariya's personal developer portfolio, showcasing expertise in full-stack development, open-source contributions, and cutting-edge web technologies.",
+      "Personal developer portfolio of Vaibhav Katariya, also known as Kaily. Explore projects, experience, and technical work.",
     url: "https://kaily.in",
+    siteName: "Kaily",
     type: "website",
     images: [
       {
@@ -34,6 +59,12 @@ export const metadata: Metadata = {
         alt: "Vaibhav Katariya Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vaibhav Katariya | Portfolio",
+    description: "Personal portfolio of Vaibhav Katariya, also known as Kaily.",
+    images: ["/og.png"],
   },
 };
 
@@ -62,7 +93,7 @@ export default function RootLayout({
         className={cn(
           "mx-auto flex min-h-screen max-w-3xl flex-col px-8 font-sans antialiased",
           inter.variable,
-          calistoga.variable
+          calistoga.variable,
         )}
       >
         <Providers>
