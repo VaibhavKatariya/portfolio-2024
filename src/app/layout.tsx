@@ -75,20 +75,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-8BL1MW3XPW"
-        strategy="afterInteractive"
-      />
-
-      <Script id="ga" strategy="afterInteractive">
-        {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8BL1MW3XPW');
-  `}
-      </Script>
-
       <body
         className={cn(
           "mx-auto flex min-h-screen max-w-3xl flex-col px-8 font-sans antialiased",
