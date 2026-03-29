@@ -7,6 +7,7 @@ import ChatMessages from "./ChatMessages";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import { useChatbot } from "@/contexts/ChatContext";
 import { sendMessageToGemini } from "@/utils/geminiApi";
+import { sanitizeMDX } from "@/lib/sanitizeMdx";
 
 export default function Chat() {
   const { isVisible } = useChatbot();
@@ -34,22 +35,29 @@ export default function Chat() {
     if (!userInput.trim()) return;
 
     setError(null);
-    setIsLoading(true); // Start loading
+    setIsLoading(true);
 
     const newMessages = [...messages, { role: "user", text: userInput }];
     setMessages(newMessages);
 
     try {
       const botResponse = await sendMessageToGemini(userInput);
-      setMessages([...newMessages, { role: "model", text: botResponse }]);
+
+      const safeResponse = sanitizeMDX(botResponse);
+
+      setMessages([
+        ...newMessages,
+        { role: "model", text: safeResponse }
+      ]);
+
     } catch (err) {
       console.error("Error sending message:", err);
       setError("Something went wrong. Please try again.");
     } finally {
-      setIsLoading(false); // Stop loading
+      setIsLoading(false);
     }
   };
-
+  
   const clearChat = () => {
     setMessages([]);
     setError(null);
