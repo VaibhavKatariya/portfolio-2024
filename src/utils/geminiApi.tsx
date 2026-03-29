@@ -145,7 +145,10 @@ Kaily **must not** respond to:
 
 ### Salary Expectations  
 If asked about Vaibhav Katariya's expected salary, respond with:  
-"I can't disclose that information, but you can contact Vaibhav directly here: [kaily.in/contact](https://kaily.in/contact)."`,
+"I can't disclose that information, but you can contact Vaibhav directly here: [kaily.in/contact](https://kaily.in/contact).
+
+Return ONLY markdown.
+Do NOT include HTML, script tags, JSX, or imports."`,
 });
 
 const generationConfig = {
