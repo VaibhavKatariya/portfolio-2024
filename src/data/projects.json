@@ -1,6 +1,30 @@
 {
   "projects": [
     {
+      "name": "Interview AI – GenAI Interview Preparation System",
+      "description": "An AI-powered full-stack platform that analyzes resumes against job descriptions to generate personalized interview strategies, including match scores, skill gaps, technical and behavioral questions, and preparation roadmaps.",
+      "image": "/projects/interview-ai.png",
+      "href": "https://github.com/VaibhavKatariya/Interview-AI",
+      "tags": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "GenAI",
+        "JWT",
+        "Zod",
+        "Full-Stack",
+        "AI"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/VaibhavKatariya/Interview-AI",
+          "icon": "github"
+        }
+      ]
+    },
+    {
       "name": "Autamail",
       "description": "Autamail is a role-based, approval-driven email management platform built with Next.js and Firebase. It is designed to safely queue, approve, send, and audit emails at scale while keeping Firestore reads optimized and all sensitive logic server-side.",
       "image": "/projects/autamail.png",
