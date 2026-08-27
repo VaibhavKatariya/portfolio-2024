@@ -8,13 +8,13 @@ import Link from "next/link";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from "sonner";
-import Head from "next/head";
 import { useRouter } from "next/navigation";
 
 interface FormData {
   name: string;
   email: string;
   message: string;
+  honeypot?: string; // Optional honeypot field for spam prevention
 }
 
 export default function ProjectPage() {
@@ -22,6 +22,7 @@ export default function ProjectPage() {
     name: "",
     email: "",
     message: "",
+    honeypot: "",
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
@@ -57,8 +58,12 @@ export default function ProjectPage() {
 
     try {
       setIsSubmitting(true);
-      
-      if ((formData as any).honeypot) return
+
+      if (formData.honeypot) {
+        setIsSubmitting(false);
+        return;
+      }
+
       const formDataToSend = new FormData();
       formDataToSend.append("entry.2005620554", formData.name);
       formDataToSend.append("entry.1045781291", formData.email);
@@ -73,7 +78,7 @@ export default function ProjectPage() {
         }
       );
 
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "", honeypot: "" });
       setIsSubmitted(true);
       toast.success("Message submitted successfully!");
 
@@ -89,13 +94,6 @@ export default function ProjectPage() {
 
   return (
     <>
-      <Head>
-        <script
-          src="https://www.google.com/recaptcha/api.js"
-          async
-          defer
-        ></script>
-      </Head>
       <article className="mt-8 flex flex-col gap-8 pb-16">
         <h1 className="title">Contact Me</h1>
         <Breadcrumbs
@@ -110,12 +108,19 @@ export default function ProjectPage() {
           ) : (
             <>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                <div className="h-16 hidden">
+                <div
+                  className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <label htmlFor="website">Website</label>
                   <input
+                    id="website"
                     type="text"
                     name="honeypot"
-                    style={{ display: "none" }}
+                    value={formData.honeypot}
+                    onChange={handleInputChange}
                     tabIndex={-1}
+                    autoComplete="off"
                   />
                 </div>
                 <div className="h-16">
