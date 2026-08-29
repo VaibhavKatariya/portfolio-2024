@@ -49,22 +49,23 @@ export const metadata: Metadata = {
     description:
       "Personal developer portfolio of Vaibhav Katariya, also known as Kaily. Explore projects, experience, and technical work.",
     url: "https://vaibhavkatariya.in",
-    siteName: "Kaily",
+    siteName: "Vaibhav Katariya",
     type: "website",
     images: [
       {
-        url: "https://opengraph.githubassets.com/1a2b3c4d/vaibhavkatariya/portfolio-2024",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Vaibhav Katariya Portfolio",
+        alt: "Vaibhav Katariya | Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Vaibhav Katariya | Portfolio",
-    description: "Personal portfolio of Vaibhav Katariya, also known as Kaily.",
-    images: ["/og.png"],
+    description:
+      "Personal portfolio of Vaibhav Katariya, also known as Kaily.",
+    images: ["/opengraph-image"],
   },
 };
 
