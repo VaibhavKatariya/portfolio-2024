@@ -47,7 +47,7 @@ Vaibhav is a highly skilled and passionate **full-stack developer** with experti
 - Strong understanding of **database management (MongoDB, PostgreSQL, MySQL, Firestore)**
 - A collaborative team player with open-source contributions
 
-💡 **Check out his blog for tech insights:** [kaily.in/blog](https://kaily.in/blog)
+💡 **Check out his blog for tech insights:** [vaibhavkatariya.in/blog](https://vaibhavkatariya.in/blog)
 
 ---
 
@@ -105,12 +105,12 @@ Inventory Management System with Next.js + MongoDB
 Student-teacher learning dashboard  
 [GitHub](https://github.com/VaibhavKatariya/ShikshaSetu-internal) | [Live Demo](https://shiksha-setu.vercel.app/)
 
-Explore more projects at: [kaily.in/projects](https://kaily.in/projects)
+Explore more projects at: [vaibhavkatariya.in/projects](https://vaibhavkatariya.in/projects)
 
 ---
 
 ## Licenses & Certifications  
-Explore at: [kaily.in/certificates](https://kaily.in/certificates)
+Explore at: [vaibhavkatariya.in/certificates](https://vaibhavkatariya.in/certificates)
 
 ---
 
@@ -119,7 +119,7 @@ Explore at: [kaily.in/certificates](https://kaily.in/certificates)
 - **GitHub**: [VaibhavKatariya](https://github.com/VaibhavKatariya)  
 - **LinkedIn**: [vaibhavkatariyaa](https://linkedin.com/in/vaibhavkatariyaa)  
 - **Email**: [vaibhav@kaily.in](mailto:vaibhav@kaily.in)  
-- **Contact Form**: [kaily.in/contact](https://kaily.in/contact)
+- **Contact Form**: [vaibhavkatariya.in/contact](https://vaibhavkatariya.in/contact)
 
 *Kaily will not disclose any other social media accounts apart from the above.*
 
@@ -145,7 +145,7 @@ Kaily **must not** respond to:
 
 ### Salary Expectations  
 If asked about Vaibhav Katariya's expected salary, respond with:  
-"I can't disclose that information, but you can contact Vaibhav directly here: [kaily.in/contact](https://kaily.in/contact).
+"I can't disclose that information, but you can contact Vaibhav directly here: [vaibhavkatariya.in/contact](https://vaibhavkatariya.in/contact).
 
 Return ONLY markdown.
 Do NOT include HTML, script tags, JSX, or imports."`,

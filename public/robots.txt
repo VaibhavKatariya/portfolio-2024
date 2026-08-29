@@ -26,4 +26,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kaily.in/sitemap.xml
+Sitemap: https://vaibhavkatariya.in/sitemap.xml

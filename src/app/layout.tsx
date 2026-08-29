@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     "Kaily portfolio",
     "Vaibhav Katariya developer",
   ],
-  metadataBase: new URL("https://kaily.in"),
+  metadataBase: new URL("https://vaibhavkatariya.in"),
   alternates: {
-    canonical: "https://kaily.in",
+    canonical: "https://vaibhavkatariya.in",
   },
   robots: {
     index: true,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Vaibhav Katariya | Developer Portfolio | Kaily",
     description:
       "Personal developer portfolio of Vaibhav Katariya, also known as Kaily. Explore projects, experience, and technical work.",
-    url: "https://kaily.in",
+    url: "https://vaibhavkatariya.in",
     siteName: "Kaily",
     type: "website",
     images: [

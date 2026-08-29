@@ -31,7 +31,7 @@ This project is open-source and licensed under the MIT License.
 
 Feel free to reach out to me via:
 
-- **Email**: [Vaibhav@kaily.in](mailto:vaibhav@kaily.in)
+- **Email**: [vaibhav@kaily.in](mailto:vaibhav@kaily.in)
 - **GitHub**: [GitHub Profile](https://github.com/VaibhavKatariya)
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/vaibhavkatariyaa)
 
