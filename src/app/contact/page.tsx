@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 interface FormData {
   name: string;
   email: string;
+  phone: string;
   message: string;
   honeypot?: string; // Optional honeypot field for spam prevention
 }
@@ -21,6 +22,7 @@ export default function ProjectPage() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    phone: "",
     message: "",
     honeypot: "",
   });
@@ -43,6 +45,13 @@ export default function ProjectPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
+    if (name === "phone") {
+      const sanitizedValue = value.replace(/[^0-9+()\-\s]/g, "");
+      setFormData((prev) => ({ ...prev, phone: sanitizedValue }));
+      return;
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -67,6 +76,7 @@ export default function ProjectPage() {
       const formDataToSend = new FormData();
       formDataToSend.append("entry.2005620554", formData.name);
       formDataToSend.append("entry.1045781291", formData.email);
+      formDataToSend.append("entry.762983244", formData.phone);
       formDataToSend.append("entry.839337160", formData.message);
 
       const response = await fetch(
@@ -78,7 +88,7 @@ export default function ProjectPage() {
         }
       );
 
-      setFormData({ name: "", email: "", message: "", honeypot: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", honeypot: "" });
       setIsSubmitted(true);
       toast.success("Message submitted successfully!");
 
@@ -144,6 +154,21 @@ export default function ProjectPage() {
                     autoComplete="email"
                     value={formData.email}
                     onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="h-16">
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputMode="numeric"
+                    pattern="[0-9+()\-\s]*"
+                    placeholder="Phone (WhatsApp Preferred)"
+                    autoComplete="tel"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    onWheel={(event) => event.preventDefault()}
                     required
                   />
                 </div>
