@@ -1,26 +1,28 @@
 {
   "projects": [
     {
-      "name": "Interview AI – GenAI Interview Preparation System",
-      "description": "An AI-powered full-stack platform that analyzes resumes against job descriptions to generate personalized interview strategies, including match scores, skill gaps, technical and behavioral questions, and preparation roadmaps.",
-      "image": "/projects/interview-ai.png",
-      "href": "https://github.com/VaibhavKatariya/Interview-AI",
+      "name": "GhostChat",
+      "description": "A real-time chat application for temporary conversations. Users can create private chat rooms, communicate in real time, and let conversations automatically disappear after the room expires.",
+      "image": "/projects/ghostchat.png",
+      "href": "https://ghostchat.vaibhavkatariya.in/",
       "tags": [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "GenAI",
-        "JWT",
-        "Zod",
-        "Full-Stack",
-        "AI"
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Redis",
+        "Real-Time",
+        "Full-Stack"
       ],
       "links": [
         {
           "name": "Source",
-          "href": "https://github.com/VaibhavKatariya/Interview-AI",
+          "href": "https://github.com/VaibhavKatariya/ghostchat",
           "icon": "github"
+        },
+        {
+          "name": "Demo",
+          "href": "https://ghostchat.vaibhavkatariya.in/",
+          "icon": "external-link"
         }
       ]
     },
@@ -48,6 +50,30 @@
           "name": "Demo",
           "href": "https://mailing.gdg-jiit.com/",
           "icon": "external-link"
+        }
+      ]
+    },
+    {
+      "name": "Interview AI – GenAI Interview Preparation System",
+      "description": "An AI-powered full-stack platform that analyzes resumes against job descriptions to generate personalized interview strategies, including match scores, skill gaps, technical and behavioral questions, and preparation roadmaps.",
+      "image": "/projects/interview-ai.png",
+      "href": "https://github.com/VaibhavKatariya/Interview-AI",
+      "tags": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "GenAI",
+        "JWT",
+        "Zod",
+        "Full-Stack",
+        "AI"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/VaibhavKatariya/Interview-AI",
+          "icon": "github"
         }
       ]
     },
