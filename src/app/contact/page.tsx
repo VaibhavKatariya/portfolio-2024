@@ -79,7 +79,7 @@ export default function ProjectPage() {
       formDataToSend.append("entry.762983244", formData.phone);
       formDataToSend.append("entry.839337160", formData.message);
 
-      const response = await fetch(
+      await fetch(
         "https://docs.google.com/forms/d/1bT9JelPLsTjGVvwe6ESLvs-PAicLfnh_vY6RZoNCPzU/formResponse",
         {
           method: "POST",

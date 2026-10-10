@@ -6,7 +6,7 @@ import { FileDown } from "lucide-react";
 const ResumeButton = () => {
   const trackClick = () => {
     if (typeof window !== "undefined" && "gtag" in window) {
-      // @ts-ignore
+      // @ts-expect-error window.gtag is injected by Google Analytics
       window.gtag("event", "resumeButtonClicked", {
         event_category: "engagement",
         event_label: "Resume Button",

@@ -5,9 +5,6 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { Calistoga, Inter } from "next/font/google";
 import "./globals.css";
-import Chat from "@/components/chat";
-import { ChatProvider } from "@/contexts/ChatContext";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -75,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "mx-auto flex min-h-screen max-w-3xl flex-col px-8 font-sans antialiased",
@@ -85,10 +82,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <ChatProvider>
-            <main className="grow">{children}</main>
-          </ChatProvider>
-          <Chat />
+          <main className="grow">{children}</main>
           <Footer />
         </Providers>
       </body>

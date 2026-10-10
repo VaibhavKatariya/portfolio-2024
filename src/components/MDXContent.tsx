@@ -3,8 +3,11 @@ import { JSX } from "react";
 import { highlight } from "sugar-high";
 import Counter from "./Counter";
 
-function Code({ children, ...props }: any) {
-  const codeHTML = highlight(children);
+function Code({ children, ...props }: React.ComponentPropsWithoutRef<"code">) {
+  const codeHTML = typeof children === "string" ? highlight(children) : "";
+  if (!codeHTML) {
+    return <code {...props}>{children}</code>;
+  }
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
